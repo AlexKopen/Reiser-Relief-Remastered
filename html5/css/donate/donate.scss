@@ -1,0 +1,46 @@
+@use '../globals';
+
+#donate-container {
+  max-width: 48em;
+
+  .flex-container {
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: 992px) {
+      flex-wrap: revert;
+    }
+  }
+
+  #quote {
+    text-align: center;
+    color: globals.$gray
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: globals.$base-color;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  iframe {
+    display: block;
+    margin: 0 auto;
+  }
+
+  i {
+    font-size: 3em;
+    color: globals.$base-color;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  #link {
+    text-decoration: underline !important;
+  }
+}

@@ -1,0 +1,151 @@
+@use 'template';
+@use 'globals';
+@use 'header';
+@use 'footer';
+
+@use 'home/banner';
+@use 'home/info';
+@use 'home/newsletter';
+@use 'home/feed';
+
+@use 'about/about';
+@use 'about/core-values';
+@use 'about/board-members';
+@use 'about/founder';
+
+@use 'contact/contact';
+
+@use 'donate/donate';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: globals.$white;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+p {
+  line-height: 2em;
+}
+
+button {
+  width: 10em;
+  height: 2.5em;
+  color: globals.$white;
+  border: 0;
+  border-radius: 4px;
+  background: globals.$base-color-light;
+
+  &:hover {
+    cursor: pointer !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0) !important;
+  }
+}
+
+h1 {
+  font-size: 2.5em;
+
+  @media only screen and (min-width: 1200px) {
+    font-size: 4em;
+  }
+}
+
+i {
+  &:hover {
+    color: globals.$base-color-light;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.no-border {
+  border: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-top-margin {
+  margin-top: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
+.only-show-large {
+  display: none;
+
+  @media only screen and (min-width: 992px) {
+    display: revert;
+  }
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-item {
+  width: 100%;
+}
+
+@mixin alert-message($color, $background-color, $border-color) {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+}
+
+.success {
+  @include alert-message(#155724, #d4edda, #c3e6cb);
+}
+
+.error {
+  @include alert-message(#721c24, #f8d7da, #f5c6cb);
+}

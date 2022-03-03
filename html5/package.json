@@ -1,0 +1,21 @@
+{
+  "name": "reiser-relief",
+  "version": "0.0.1",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "scripts": {
+    "start": "concurrently \"sass --watch css/main.scss css/main.css\" \"tsc --watch js/main.ts\""
+  },
+  "main": "index.js",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "sass": "^1.49.7",
+    "typescript": "^4.5.5"
+  }
+}

@@ -1,0 +1,80 @@
+@use '../globals';
+
+#contact-container {
+  #contact-form-container {
+    margin: 0 auto;
+    max-width: 40em;
+
+    @media only screen and (min-width: 992px) {
+      max-width: revert;
+    }
+  }
+
+  .flex-container {
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: 992px) {
+      flex-wrap: revert;
+    }
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: globals.$base-color;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  #contact-text {
+    margin: 0 auto;
+    text-align: center;
+    color: globals.$gray;
+    max-width: 40em;
+  }
+
+  #form-item {
+    @media only screen and (min-width: 992px) {
+      min-width: 54em;
+      padding-right: 4em;
+    }
+  }
+
+  input, textarea {
+    margin-bottom: 2em;
+  }
+
+  textarea {
+    min-height: 10em;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.75em;
+  }
+
+  i {
+    font-size: 3em;
+    color: globals.$base-color;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  #additional-info {
+    text-align: center;
+    margin-top: 2em;
+    border-top: 1px solid globals.$base-color;
+
+    @media only screen and (min-width: 992px) {
+      border-top: revert;
+      border-left: 1px solid globals.$base-color;
+
+      p {
+        margin-bottom: 3em;
+      }
+    }
+  }
+}

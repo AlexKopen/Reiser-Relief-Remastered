@@ -1,0 +1,127 @@
+@use 'globals';
+
+#header-container {
+  $min-height: 6em;
+  min-height: $min-height;
+  background: globals.$base-color;
+  color: globals.$white;
+  text-align: center;
+
+  @media only screen and (min-width: 992px) {
+    line-height: $min-height;
+  }
+
+  p {
+    margin: 0;
+
+    @media only screen and (min-width: 992px) {
+      margin: revert;
+    }
+  }
+
+  ul {
+    text-align: center;
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+
+    @media only screen and (min-width: 992px) {
+      display: inline-block;
+    }
+
+    & a:hover {
+      color: globals.$base-color-light;
+    }
+  }
+
+  #header-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: 992px) {
+      flex-wrap: revert;
+    }
+  }
+
+  .header-item {
+    width: 100%;
+    margin-bottom: 1.5em;
+
+    @media only screen and (min-width: 992px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .nav-block {
+    max-width: 20em;
+    margin: 0 auto;
+    padding: 1em 0;
+    border-bottom: 1px solid globals.$base-color-light;
+
+    @media only screen and (min-width: 992px) {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: 0;
+      max-width: revert;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .inner-nav-block {
+    @media only screen and (min-width: 992px) {
+      $inner-block-height: 2.5em;
+      width: 100%;
+      height: $inner-block-height;
+      line-height: $inner-block-height;
+      border-right: 1px solid globals.$base-color-light;
+    }
+  }
+
+  #logo {
+    @media only screen and (min-width: 992px) {
+      max-width: 15em;
+    }
+  }
+
+  #nav-items {
+    @media only screen and (min-width: 992px) {
+      ul {
+        display: flex;
+        height: 100%;
+      }
+
+      li {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  #social-icons-header {
+    display: none;
+
+    @media only screen and (min-width: 992px) {
+      display: block;
+      font-size: 1.5em;
+      max-width: 7em;
+
+      ul {
+        text-align: right;
+      }
+
+      li {
+        margin-right: 1em;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

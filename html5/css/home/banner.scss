@@ -1,0 +1,53 @@
+@use '../globals';
+
+#banner-container {
+  text-align: center;
+  color: globals.$base-color;
+  background: globals.$light-backdrop-color;
+
+  button {
+    background: globals.$base-color-light;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  #banner-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 125em;
+    margin: 0 auto;
+
+    @media only screen and (min-width: 992px) {
+      flex-wrap: revert;
+    }
+  }
+
+  .banner-item {
+    width: 100%;
+  }
+
+  #banner-image {
+    @media only screen and (min-width: 992px) {
+      min-width: 44em;
+    }
+  }
+
+  #banner-text {
+    @media only screen and (min-width: 992px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 1em;
+
+      h1, p, a {
+        width: 100%;
+      }
+
+      a {
+        margin: 0 auto;
+        align-self: end;
+      }
+    }
+  }
+}

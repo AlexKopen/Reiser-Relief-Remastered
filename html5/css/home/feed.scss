@@ -1,0 +1,45 @@
+@use '../globals';
+
+#feed-container {
+  margin-top: 2em;
+  text-align: center;
+
+  @media only screen and (min-width: 992px) {
+    text-align: left;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    color: globals.$base-color;
+  }
+
+  .event {
+    width: 100%;
+    max-width: 50em;
+    margin: 0 auto 4em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .date {
+    color: globals.$gray;
+  }
+
+  .text {
+    margin-top: 0.5em;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: globals.$base-color;
+      text-decoration: underline;
+    }
+  }
+}

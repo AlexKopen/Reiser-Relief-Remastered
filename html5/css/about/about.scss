@@ -1,0 +1,30 @@
+@use '../globals';
+
+#about-container {
+
+  #contact-form-container {
+    margin: 0 auto;
+    max-width: 40em;
+
+    @media only screen and (min-width: 992px) {
+      max-width: revert;
+    }
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: globals.$base-color;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    margin: 1em auto;
+  }
+
+  .row-backdrop {
+    background: globals.$light-backdrop-color;
+  }
+}
