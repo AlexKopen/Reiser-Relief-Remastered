@@ -10,7 +10,9 @@
 
     <div class="flex-item core-values row-2">
       <div class="flex-item-wrapper">
-        <img class="info-img" src="https://reiser-relief-test.web.app/assets/images/about/core-values/care.jpg"
+<!--        <img class="info-img" src="https://reiser-relief-test.web.app/assets/images/about/core-values/care.jpg"-->
+<!--             alt="Give">-->
+        <img class="info-img" src="<?php echo wp_get_attachment_url(get_theme_mod('lwp-footer-callout-image')) ?>"
              alt="Give">
       </div>
     </div>
@@ -27,7 +29,7 @@
 
     <div class="flex-item core-values row-4">
       <div class="flex-item-wrapper">
-        <a href="/donate">
+        <a href="/about">
           <button class="action-button">
             Learn More
           </button>
