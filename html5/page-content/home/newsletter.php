@@ -1,8 +1,8 @@
 <div id="newsletter-container">
   <div class="container">
-    <h2 class="no-margin">Stay in Touch</h2>
+    <h2 class="no-margin"><?php echo get_theme_mod('reiser-home-newsletter-headline') ?></h2>
     <p id="nl-top-text">
-      Sign up to receive occasional newsletters and updates about upcoming events.
+      <?php echo get_theme_mod('reiser-home-newsletter-text') ?>
     </p>
     <div id="newsletter-form">
       <input id="nl-name-field" class="newsletter-form-item" type="text" placeholder="Name" name="name">

@@ -8,57 +8,213 @@ wp_enqueue_style('main', get_template_directory_uri() . '/css/main.css');
 wp_register_script('script', get_template_directory_uri() . '/js/main.js');
 wp_enqueue_script('script');
 
-function add_subscriber() {
+function add_subscriber()
+{
   require 'mailchimp.php';
 }
 
-add_action( 'rest_api_init', function () {
-  register_rest_route( 'v1', '/subscribe', array(
+add_action('rest_api_init', function () {
+  register_rest_route('v1', '/subscribe', array(
     'methods' => 'POST',
     'callback' => 'add_subscriber',
-  ) );
-} );
+  ));
+});
 
-// Add Footer callout section to admin appearance customize screen
-function lwp_footer_callout($wp_customize) {
-  $wp_customize->add_section('lwp-footer-callout-section', array(
-    'title' => 'Footer Callout'
+function reiser_home($wp_customize)
+{
+  $wp_customize->add_section('reiser-home-section', array(
+    'title' => 'Reiser - Home'
   ));
 
-  $wp_customize->add_setting('lwp-footer-callout-headline', array(
-    'default' => 'Example Headline Text!'
+  //  BANNER
+  $wp_customize->add_setting('reiser-home-banner-headline', array(
+    'default' => 'Our Call to Serve'
   ));
 
-  $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'lwp-footer-callout-headline-control', array(
-    'label' => 'Headline',
-    'section' => 'lwp-footer-callout-section',
-    'settings' => 'lwp-footer-callout-headline'
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-banner-headline-control', array(
+    'label' => 'Banner Headline',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-banner-headline'
   )));
 
-
-
-  $wp_customize->add_setting('lwp-footer-callout-text', array(
+  $wp_customize->add_setting('reiser-home-banner-text', array(
     'default' => 'Since 1996, Reiser Relief has been providing relief, hope, and dignity to the poor, elderly, and homeless people of Haiti.'
   ));
 
-  $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'lwp-footer-callout-text-control', array(
-    'label' => 'Text',
-    'section' => 'lwp-footer-callout-section',
-    'settings' => 'lwp-footer-callout-text'
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-banner-text-control', array(
+    'label' => 'Banner Text',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-banner-text'
   )));
 
-  $wp_customize->add_setting('lwp-footer-callout-image');
+  $wp_customize->add_setting('reiser-home-banner-button-text', array(
+    'default' => 'Give Today'
+  ));
 
-  $wp_customize->add_control( new WP_Customize_Cropped_Image_Control($wp_customize, 'lwp-footer-callout-image-control', array(
-    'label' => 'Image',
-    'section' => 'lwp-footer-callout-section',
-    'settings' => 'lwp-footer-callout-image',
-    'width' => 750,
-    'height' => 500
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-banner-button-text-control', array(
+    'label' => 'Banner Button Text',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-banner-button-text'
   )));
 
+  $wp_customize->add_setting('reiser-home-banner-image');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-home-banner-image-control', array(
+    'label' => 'Banner Image',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-banner-image',
+    'width' => 2048,
+    'height' => 1042
+  )));
+
+  //  INFO BLOCK 1
+
+  $wp_customize->add_setting('reiser-home-info-block-1-title', array(
+    'default' => 'Core Values'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-info-block-1-title-control', array(
+    'label' => 'Info Block 1 Title',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-1-title'
+  )));
+
+  $wp_customize->add_setting('reiser-home-info-block-1-image');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-home-info-block-1-image-control', array(
+    'label' => 'Info Block 1 Image',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-1-image',
+    'width' => 520,
+    'height' => 347
+  )));
+
+  $wp_customize->add_setting('reiser-home-info-block-1-text', array(
+    'default' => 'Since our founding, the organization has grown to support four primary schools, three homes for the elderly, one home for disabled adults, one trade school, one water truck ministry, and one university scholarship program.'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-info-block-1-text-control', array(
+    'label' => 'Info Block 1 Text',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-1-text'
+  )));
+
+  $wp_customize->add_setting('reiser-home-info-block-1-button-text', array(
+    'default' => 'Learn More'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-info-block-1-button-text-control', array(
+    'label' => 'Info Block 1 Button Text',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-1-button-text'
+  )));
+
+  //  INFO BLOCK 2
+
+  $wp_customize->add_setting('reiser-home-info-block-2-title', array(
+    'default' => 'Give'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-info-block-2-title-control', array(
+    'label' => 'Info Block 2  Title',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-2-title'
+  )));
+
+  $wp_customize->add_setting('reiser-home-info-block-2-image');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-home-info-block-2-image-control', array(
+    'label' => 'Info Block 2  Image',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-2-image',
+    'width' => 520,
+    'height' => 347
+  )));
+
+  $wp_customize->add_setting('reiser-home-info-block-2-text', array(
+    'default' => 'Your donation will provide clean water, food, education and care to the poor in Haiti. Reiser Relief Inc. is a 501(c)(3) ministry. Donations are tax-exempt as allowed by law.'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-info-block-2-text-control', array(
+    'label' => 'Info Block 2 Text',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-2-text'
+  )));
+
+  $wp_customize->add_setting('reiser-home-info-block-2-button-text', array(
+    'default' => 'Donate'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-info-block-2-button-text-control', array(
+    'label' => 'Info Block 2  Button Text',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-2-button-text'
+  )));
+
+  //  INFO BLOCK 3
+
+  $wp_customize->add_setting('reiser-home-info-block-3-title', array(
+    'default' => 'Contact'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-info-block-3-title-control', array(
+    'label' => 'Info Block 3  Title',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-3-title'
+  )));
+
+  $wp_customize->add_setting('reiser-home-info-block-3-image');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-home-info-block-3-image-control', array(
+    'label' => 'Info Block 3  Image',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-3-image',
+    'width' => 530,
+    'height' => 347
+  )));
+
+  $wp_customize->add_setting('reiser-home-info-block-3-text', array(
+    'default' => 'We’d love to hear from you. Whether you have questions, comments, suggestions or just want to share your story, please don’t hesitate to contact us.'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-info-block-3-text-control', array(
+    'label' => 'Info Block 3 Text',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-3-text'
+  )));
+
+  $wp_customize->add_setting('reiser-home-info-block-3-button-text', array(
+    'default' => 'Contact Us'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-info-block-3-button-text-control', array(
+    'label' => 'Info Block 3 Button Text',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-info-block-3-button-text'
+  )));
+
+  //  NEWSLETTER
+  $wp_customize->add_setting('reiser-home-newsletter-headline', array(
+    'default' => 'Stay in Touch'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-newsletter-headline-control', array(
+    'label' => 'Newsletter Headline',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-newsletter-headline'
+  )));
+
+  $wp_customize->add_setting('reiser-home-newsletter-text', array(
+    'default' => 'Sign up to receive occasional newsletters and updates about upcoming events.'
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'reiser-home-newsletter-text-control', array(
+    'label' => 'Newsletter Text',
+    'section' => 'reiser-home-section',
+    'settings' => 'reiser-home-newsletter-text'
+  )));
 
 }
 
-add_action('customize_register', 'lwp_footer_callout');
+add_action('customize_register', 'reiser_home');
 ?>
