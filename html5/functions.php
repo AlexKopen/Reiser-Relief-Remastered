@@ -216,5 +216,88 @@ function reiser_home($wp_customize)
 
 }
 
+function reiser_about($wp_customize)
+{
+  $wp_customize->add_section('reiser-about-section', array(
+    'title' => 'Reiser - About'
+  ));
+
+  //  EDUCATION
+
+  $wp_customize->add_setting('reiser-education-image-1');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-education-image-1-control', array(
+    'label' => 'Education 1 Image',
+    'section' => 'reiser-about-section',
+    'settings' => 'reiser-education-image-1',
+    'width' => 520,
+    'height' => 347
+  )));
+
+  $wp_customize->add_setting('reiser-education-image-2');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-education-image-2-control', array(
+    'label' => 'Education 2 Image',
+    'section' => 'reiser-about-section',
+    'settings' => 'reiser-education-image-2',
+    'width' => 520,
+    'height' => 347
+  )));
+
+  //  CARE
+  $wp_customize->add_setting('reiser-care-image-1');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-care-image-1-control', array(
+    'label' => 'care 1 Image',
+    'section' => 'reiser-about-section',
+    'settings' => 'reiser-care-image-1',
+    'width' => 520,
+    'height' => 347
+  )));
+
+  $wp_customize->add_setting('reiser-care-image-2');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-care-image-2-control', array(
+    'label' => 'care 2 Image',
+    'section' => 'reiser-about-section',
+    'settings' => 'reiser-care-image-2',
+    'width' => 520,
+    'height' => 347
+  )));
+
+  //  FOUNDER
+  $wp_customize->add_setting('reiser-founder-image-1');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-founder-image-1-control', array(
+    'label' => 'founder 1 Image',
+    'section' => 'reiser-about-section',
+    'settings' => 'reiser-founder-image-1',
+    'width' => 520,
+    'height' => 347
+  )));
+
+  $wp_customize->add_setting('reiser-founder-image-2');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-founder-image-2-control', array(
+    'label' => 'founder 2 Image',
+    'section' => 'reiser-about-section',
+    'settings' => 'reiser-founder-image-2',
+    'width' => 520,
+    'height' => 347
+  )));
+
+  $wp_customize->add_setting('reiser-founder-image-3');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-founder-image-3-control', array(
+    'label' => 'founder 3 Image',
+    'section' => 'reiser-about-section',
+    'settings' => 'reiser-founder-image-3',
+    'width' => 520,
+    'height' => 347
+  )));
+
+}
+
 add_action('customize_register', 'reiser_home');
+add_action('customize_register', 'reiser_about');
 ?>
