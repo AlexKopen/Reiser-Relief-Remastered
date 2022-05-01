@@ -13,17 +13,22 @@
 
     <div class="flex-container">
       <div id="form-item" class="flex-item">
-        <form action="">
+        <div id="contact-form">
           <label for="name">Name</label>
-          <input type="text" name="name" placeholder="Enter name">
+          <input type="text" name="name" placeholder="Enter name" id="contact-name-field">
           <label for="email">Email</label>
-          <input type="text" name="email" placeholder="Enter email">
+          <input type="text" name="email" placeholder="Enter email" id="contact-email-field">
           <label for="subject">Subject</label>
-          <input type="text" name="name" placeholder="Enter subject">
+          <input type="text" name="subject" placeholder="Enter subject" id="contact-subject-field">
           <label for="message">Message</label>
-          <textarea name="message" placeholder="Enter message"></textarea>
-          <button>Submit Form</button>
-        </form>
+          <textarea name="message" placeholder="Enter message" id="contact-message-field"></textarea>
+          <button id="submit-button">Submit Form</button>
+        </div>
+        <div id="contact-success">
+          <h3>
+            Thank you, your form has been submitted! A team member will be in touch with you shortly.
+          </h3>
+        </div>
       </div>
 
       <div id="additional-info" class="flex-item">

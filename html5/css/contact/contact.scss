@@ -77,4 +77,15 @@
       }
     }
   }
+
+  #contact-success {
+    display: none;
+    min-height: 580px;
+    align-items: center;
+
+    h3 {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }

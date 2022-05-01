@@ -24,6 +24,6 @@ try {
   http_response_code(200);
   echo json_encode($response);
 } catch (Exception $e) {
-  http_response_code(500);
+  http_response_code(400);
   echo json_encode($e->getMessage());
 }

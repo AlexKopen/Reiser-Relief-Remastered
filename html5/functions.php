@@ -13,10 +13,22 @@ function add_subscriber()
   require 'mailchimp.php';
 }
 
+function contact_send()
+{
+  require 'contact.php';
+}
+
 add_action('rest_api_init', function () {
   register_rest_route('v1', '/subscribe', array(
     'methods' => 'POST',
     'callback' => 'add_subscriber',
+  ));
+});
+
+add_action('rest_api_init', function () {
+  register_rest_route('v1', '/contact', array(
+    'methods' => 'POST',
+    'callback' => 'contact_send',
   ));
 });
 
