@@ -18,6 +18,11 @@ function contact_send()
   require 'contact.php';
 }
 
+function stripe()
+{
+  require 'stripe.php';
+}
+
 add_action('rest_api_init', function () {
   register_rest_route('v1', '/subscribe', array(
     'methods' => 'POST',
@@ -29,6 +34,13 @@ add_action('rest_api_init', function () {
   register_rest_route('v1', '/contact', array(
     'methods' => 'POST',
     'callback' => 'contact_send',
+  ));
+});
+
+add_action('rest_api_init', function () {
+  register_rest_route('v1', '/stripe', array(
+    'methods' => 'POST',
+    'callback' => 'stripe',
   ));
 });
 
@@ -312,4 +324,3 @@ function reiser_about($wp_customize)
 
 add_action('customize_register', 'reiser_home');
 add_action('customize_register', 'reiser_about');
-?>

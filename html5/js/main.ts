@@ -3,15 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname.replace(/\//g, '').trim().toLowerCase();
 
   switch (path) {
+    case '':
+      newsletterSignup();
+      break;
     case 'about':
       break;
     case 'donate':
+      stripeProcess();
       break;
     case 'contact':
       contactSubmit();
       break;
-    default:
-      newsletterSignup();
   }
 });
 
@@ -80,5 +82,37 @@ function contactSubmit(): void {
         success.style.display = 'flex';
       }
     })
+  })
+}
+
+function stripeProcess(): void {
+
+  const submitButton = document.getElementById('donate-button');
+  submitButton.addEventListener('click', () => {
+    fetch("/wp-json/v1/stripe",
+      {
+        method: "post"
+      }).then(response => response.json())
+      .then((data) => {
+
+        //@ts-ignore
+        const stripe = Stripe('pk_test_2AC3GUXKprvQgKxqOPQjxo2q');
+
+        console.log(data)
+
+        const options = {
+          //@ts-ignore
+          clientSecret: data.secret,
+          // Fully customizable with appearance API.
+          appearance: {/*...*/},
+        };
+
+// Set up Stripe.js and Elements to use in checkout form, passing the client secret obtained in step 5
+        const elements = stripe.elements(options);
+
+// Create and mount the Payment Element
+        const paymentElement = elements.create('payment');
+        paymentElement.mount('#payment-element');
+      })
   })
 }

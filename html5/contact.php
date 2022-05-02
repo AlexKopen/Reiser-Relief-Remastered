@@ -1,7 +1,5 @@
 <?php
-
 use \Mailjet\Resources;
-
 require 'vendor/autoload.php';
 
 try {
@@ -10,7 +8,7 @@ try {
   $subject = $_POST["subject"];
   $message = "Name: " . $name . "\r\n" . "Email: " . $email . "\r\n" . "Message: " . $_POST["message"];
 
-  $to = "alexkopen@gmail.com";
+  $to = "info@reiserrelief.org";
 
   $mj = new \Mailjet\Client('23521b93e7ec51568fe394781b42c924', '7974991dcb6cd929980a9e34a48b63cc', true, ['version' => 'v3.1']);
   $body = [
@@ -18,12 +16,12 @@ try {
       [
         'From' => [
           'Email' => "info@reiserrelief.org",
-          'Name' => "Reiser Relief Contact"
+          'Name' => "Reiser Relief Contact Form"
         ],
         'To' => [
           [
             'Email' => $to,
-            'Name' => "Alex"
+            'Name' => "Reiser Relief"
           ]
         ],
         'Subject' => $subject,
@@ -33,7 +31,6 @@ try {
   ];
   $response = $mj->post(Resources::$Email, ['body' => $body]);
   $response->success() && var_dump($response->getData());
-
 
   $object = (object)['message' => 'success'];
   http_response_code(200);
