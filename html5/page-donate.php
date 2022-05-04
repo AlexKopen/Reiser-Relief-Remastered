@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<script src="https://js.stripe.com/v3/"></script>
 
 <div id="donate-container" class="container">
   <h1>Donate</h1>
@@ -44,31 +43,7 @@
 
   <h3>Online</h3>
 
-  <p id="link"><a href="https://buy.stripe.com/5kAbKf7B838O05W000" target="_blank">Donate online today</a></p>
-
-  <button id="donate-button">Donate</button>
-
-
-<!--  <form id="signup-form">-->
-<!--    <label>-->
-<!--      Email-->
-<!--      <input id="email" type="text" placeholder="Email address" value="test@example.com" required />-->
-<!--    </label>-->
-<!---->
-<!--    <button type="submit">-->
-<!--      Register-->
-<!--    </button>-->
-<!--  </form>-->
-
-  <form id="payment-form">
-    <div id="payment-element">
-      <!-- Elements will create form elements here -->
-    </div>
-    <button id="submit">Subscribe</button>
-    <div id="error-message">
-      <!-- Display error message to your customers here -->
-    </div>
-  </form>
+  <div style="position:relative;overflow:hidden;width:100%;height:1200px;padding-top:100%"><iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' src='https://www.zeffy.com/en/embed/donation-form/9e584e2f-158f-4664-be91-fc1c11db4e85' allowpaymentrequest allowTransparency="true"></iframe></div>
 
 </div>
 
