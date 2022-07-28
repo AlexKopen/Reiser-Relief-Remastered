@@ -16,7 +16,7 @@
 
   <h2>Donate Today</h2>
 
-  <h3>By Mail or Corporate Grants</h3>
+  <h3>By Mail</h3>
 
   <div class="flex-container">
 
@@ -30,20 +30,16 @@
       </p>
     </div>
 
-    <div class="flex-item">
-      <p>
-        <i class="fa-solid fa-hand-holding-heart"></i><br>
-        Many companies support employee philanthropy by offering matching gift programs. Please check with your HR
-        department to see if your employer will match your gift to Reiser Relief Inc. Reiser Relief Inc. Federal Tax ID EIN:
-        87-0778133
-      </p>
-    </div>
-
   </div>
 
   <h3>Online</h3>
+  <p>
+    <i class="fa-solid fa-hand-holding-heart"></i><br>
+  </p>
 
   <script src="https://donorbox.org/widget.js" paypalExpress="false"></script><iframe src="https://donorbox.org/embed/reiser-relief-donation" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="427px" style="max-height:none!important"></iframe>
+
+  <p>Reiser Relief Inc. Federal Tax ID: 87-0778133</p>
 
 </div>
 

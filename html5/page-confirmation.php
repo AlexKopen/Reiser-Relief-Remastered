@@ -6,7 +6,7 @@
   <h1>Donate</h1>
 
   <p id="quote">
-    Your donation provides hope for a brighter future and care for those unable to care for themselves. Reiser Relief Inc. is a 501(c)(3) ministry. Donations are tax-exempt as allowed by law.
+    Your donation will empower and engage the people of Haiti, in Christ's name.
   </p>
 
   <iframe width="700" height="400" src="https://www.youtube.com/embed/JR0DUX1ItSw" title="YouTube video player"

@@ -8,7 +8,7 @@ try {
   $subject = $_POST["subject"];
   $message = "Name: " . $name . "\r\n" . "Email: " . $email . "\r\n" . "Message: " . $_POST["message"];
 
-  $to = "info@reiserrelief.org";
+  $to = "joycegetchell@reiserrelief.org";
 
   $mj = new \Mailjet\Client('23521b93e7ec51568fe394781b42c924', '7974991dcb6cd929980a9e34a48b63cc', true, ['version' => 'v3.1']);
   $body = [
