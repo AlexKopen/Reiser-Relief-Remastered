@@ -5,18 +5,14 @@
 <div id="donate-container" class="container">
   <h1>Donate</h1>
 
-  <p id="quote">
-    Your donation provides hope for a brighter future and care for those unable to care for themselves. Reiser Relief Inc. is a 501(c)(3) ministry. Donations are tax-exempt as allowed by law.
+  <h2>Online</h2>
+  <p>
+    <i class="fa-solid fa-hand-holding-heart"></i><br>
   </p>
 
-  <iframe width="700" height="400" src="https://www.youtube.com/embed/JR0DUX1ItSw" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+  <script src="https://donorbox.org/widget.js" paypalExpress="false"></script><iframe src="https://donorbox.org/embed/reiser-relief-donation" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="427px" style="max-height:none!important"></iframe>
 
-  <h2>Donate Today</h2>
-
-  <h3>By Mail</h3>
+  <h2>By Mail</h2>
 
   <div class="flex-container">
 
@@ -32,14 +28,12 @@
 
   </div>
 
-  <h3>Online</h3>
-  <p>
-    <i class="fa-solid fa-hand-holding-heart"></i><br>
+  <img src="" alt="">
+
+  <p style="margin-top: 2em">
+    Reiser Relief Inc. is a 501(c)(3) ministry. Donations are tax-exempt as allowed by law. <br>
+    Reiser Relief Inc. Federal Tax ID: 87-0778133
   </p>
-
-  <script src="https://donorbox.org/widget.js" paypalExpress="false"></script><iframe src="https://donorbox.org/embed/reiser-relief-donation" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="427px" style="max-height:none!important"></iframe>
-
-  <p>Reiser Relief Inc. Federal Tax ID: 87-0778133</p>
 
 </div>
 

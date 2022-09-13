@@ -18,6 +18,16 @@ if (!is_admin()) {
       }
 
       ?>" alt="Education">
+
+      <img style="margin-top: 1em" src="<?php
+
+      if (get_theme_mod('reiser-education-image-1-2')) {
+        echo wp_get_attachment_url(get_theme_mod('reiser-education-image-1-2'));
+      } else {
+        echo 'https://reiserrelief.org/wp-content/uploads/2022/07/cropped-CDMS-group-of-students-1-scaled-1.jpg';
+      }
+
+      ?>" alt="Education">
     </div>
 
     <div class="flex-item">

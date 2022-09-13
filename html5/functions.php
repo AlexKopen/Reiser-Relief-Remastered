@@ -246,6 +246,16 @@ function reiser_about($wp_customize)
     'height' => 347
   )));
 
+  $wp_customize->add_setting('reiser-education-image-1-2');
+
+  $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-education-image-1-2-control', array(
+    'label' => 'Education 1-2 Image',
+    'section' => 'reiser-about-section',
+    'settings' => 'reiser-education-image-1-2',
+    'width' => 520,
+    'height' => 347
+  )));
+
   $wp_customize->add_setting('reiser-education-image-2');
 
   $wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize, 'reiser-education-image-2-control', array(

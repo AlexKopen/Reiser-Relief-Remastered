@@ -2,16 +2,16 @@
   <h2>Board Members</h2>
   <div class="container flex-container">
     <div class="board-member">
-      <img class="member-pic" src="<?php echo get_template_directory_uri() . '/img/board/ann_brau.jpg'; ?>"
+      <img class="member-pic" src="<?php echo get_template_directory_uri() . '/img/board/joyce_getchell.jpg'; ?>"
            alt="Board Member">
-      <p class="member-name">Ann Brau</p>
+      <p class="member-name">Joyce Getchell</p>
       <p class="member-title">Board President</p>
     </div>
 
     <div class="board-member">
-      <img class="member-pic" src="<?php echo get_template_directory_uri() . '/img/board/joyce_getchell.jpg'; ?>"
+      <img class="member-pic" src="<?php echo get_template_directory_uri() . '/img/board/ann_brau.jpg'; ?>"
            alt="Board Member">
-      <p class="member-name">Joyce Getchell</p>
+      <p class="member-name">Ann Brau</p>
       <p class="member-title">Vice President</p>
     </div>
 
