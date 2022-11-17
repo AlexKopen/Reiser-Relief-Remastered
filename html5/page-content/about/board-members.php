@@ -5,6 +5,7 @@
       <img class="member-pic" src="<?php echo get_template_directory_uri() . '/img/board/joyce_getchell.jpg'; ?>"
            alt="Board Member">
       <p class="member-name">Joyce Getchell</p>
+      <p class="member-title"><a href="mailto:joycegetchell@reiserrelief.org">joycegetchell@reiserrelief.org</a></p>
       <p class="member-title">Board President</p>
     </div>
 
@@ -68,6 +69,13 @@
       <img class="member-pic" src="<?php echo get_template_directory_uri() . '/img/board/ann_rinehart.png'; ?>"
            alt="Board Member">
       <p class="member-name">Dr. Ann Rinehart</p>
+      <p class="member-title">Board Member</p>
+    </div>
+
+    <div class="board-member">
+      <img class="member-pic" src="<?php echo get_template_directory_uri() . '/img/board/kelly_merriman.jpeg'; ?>"
+           alt="Board Member">
+      <p class="member-name">Kelly Merriman</p>
       <p class="member-title">Board Member</p>
     </div>
   </div>

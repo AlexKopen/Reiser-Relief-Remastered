@@ -21,10 +21,10 @@ if (!is_admin()) {
 
       <img style="margin-top: 1em" src="<?php
 
-      if (get_theme_mod('reiser-education-image-1-2')) {
-        echo wp_get_attachment_url(get_theme_mod('reiser-education-image-1-2'));
+      if (get_theme_mod('reiser-education-image-2')) {
+        echo wp_get_attachment_url(get_theme_mod('reiser-education-image-2'));
       } else {
-        echo 'https://reiserrelief.org/wp-content/uploads/2022/07/cropped-CDMS-group-of-students-1-scaled-1.jpg';
+        echo 'https://reiserrelief.org/wp-content/uploads/2022/07/cropped-CDMS-student-1-scaled-1.jpg';
       }
 
       ?>" alt="Education">
@@ -62,10 +62,10 @@ if (!is_admin()) {
 
       <div class="flex-item container">
         <img src="<?php
-        if (get_theme_mod('reiser-education-image-2')) {
-          echo wp_get_attachment_url(get_theme_mod('reiser-education-image-2'));
+        if (get_theme_mod('reiser-education-image-1-2')) {
+          echo wp_get_attachment_url(get_theme_mod('reiser-education-image-1-2'));
         } else {
-          echo 'https://reiserrelief.org/wp-content/uploads/2022/07/cropped-CDMS-student-1-scaled-1.jpg';
+          echo 'https://reiserrelief.org/wp-content/uploads/2022/07/cropped-CDMS-group-of-students-1-scaled-1.jpg';
         }
         ?>" alt="Education">
       </div>
