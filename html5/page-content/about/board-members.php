@@ -74,7 +74,7 @@
 
     <div class="board-member">
       <img class="member-pic" src="<?php echo get_template_directory_uri() . '/img/board/kelly_merriman.jpeg'; ?>"
-           alt="Board Member">
+           alt="Board Member" style="max-width: 192px">
       <p class="member-name">Kelly Merriman</p>
       <p class="member-title">Board Member</p>
     </div>

@@ -1,5 +1,9 @@
 @use 'globals';
 
+.page-template-default, .home.blog {
+  margin: 0;
+}
+
 #header-container {
   $min-height: 6em;
   min-height: $min-height;
